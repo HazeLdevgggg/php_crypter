@@ -42,10 +42,11 @@
     $ip =  md5($_SERVER['REMOTE_ADDR']);
     $date =  date("Y-m-d H:i:s");
     try {
-        $serveur = "sportmarludev.mysql.db"; 
-        $login = "sportmarludev"; 
-        $pass = "DevMadein34"; 
-        $connection = new PDO("mysql:host=$serveur;dbname=sportmarludev",$login, $pass); 
+       $serveur = "//"; 
+        $login = "//"; 
+        $pass = "//"; 
+        $dbname = "//"; 
+        $connection = new PDO("mysql:host=$serveur;dbname=$dbname,$login, $pass); 
         $connection -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
         $stmt = $connection->prepare("SELECT * FROM user WHERE username=:username");
         $stmt->bindParam(':username', $username);
